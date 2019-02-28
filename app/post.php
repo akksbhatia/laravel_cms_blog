@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class post extends Model
 {
+
+    public function author()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function getImageUrlAttribute($value)
     {
         $imageUrl="";
